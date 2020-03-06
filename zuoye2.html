@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>表单</title>
+
+</head>
+<style type="text/css">
+    .leg {
+        color: red;
+    }
+    
+    .fieldset1 {
+        width: 340px;
+    }
+    
+    .form1 {
+        width: 320px;
+    }
+    
+    .input1 {
+        width: 300px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .span1 {
+        color: red;
+    }
+</style>
+
+<body>
+    <h1>学生信息</h1>
+    <fieldset class="fieldset1">
+        <legend class="leg">学生档案</legend>
+        <form class="form1">
+            姓名：<br>
+            <input class="input1" type="text" name="name1" required placeholder="请输入姓名"><span class="span1">*</span>
+            <br> 学号：
+            <br>
+            <input class="input1" type="text" name="num" required placeholder="请输入学号"><span class="span1">*</span>
+            <br> 手机号码：
+            <br>
+            <input class="input1" type="tel" name="tel1" required placeholder="请输入手机号"><span class="span1">*</span>
+            <br> 邮箱地址：
+            <br>
+            <input class="input1" type="email" name="email1" required placeholder="请输入邮箱地址"><span class="span1">*</span>
+            <br> 录取学校：
+            <br>
+            <input class="input1" type="search" name="school" list="xuexiao">
+            <datalist id="xuexiao">
+			<option>河北师范大学</option>
+			<option>河北科技大学</option>
+			<option>河北医科大学</option>
+			<option>石家庄铁道大学</option>
+		    </datalist>
+            <br> 入学成绩：
+            <br>
+            <input class="input1" type="text" name="chengji">
+            <br>入学时间：
+            <br>
+            <input class="input1" type="date" name="date1" value="年/月/日">
+            <br>
+            <input class="input1" type="submit" value="提交">
+        </form>
+    </fieldset>
+</body>
+
+</html>
