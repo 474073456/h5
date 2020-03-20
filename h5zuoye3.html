@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>换肤</title>
+</head>
+<style type="text/css">
+    .head {
+        margin: 0 auto;
+        width: 1100px;
+    }
+    
+    .word {
+        color: red;
+        font-size: 20px;
+    }
+    
+    .head1 {
+        width: 1000px;
+        height: 50px;
+        margin: 0 auto;
+    }
+    
+    #div1 {
+        width: 20px;
+        height: 40px;
+        background-color: blue;
+        float: left;
+        margin-right: 10px;
+        margin-top: 15px;
+    }
+    
+    #div2 {
+        width: 20px;
+        height: 40px;
+        background-color: green;
+        float: left;
+        margin-right: 10px;
+        margin-top: 15px;
+    }
+    
+    #div3 {
+        width: 20px;
+        height: 40px;
+        background-color: red;
+        float: left;
+        margin-right: 10px;
+        margin-top: 15px;
+    }
+    
+    #div4 {
+        width: 20px;
+        height: 40px;
+        background-color: pink;
+        float: left;
+        margin-right: 10px;
+        margin-top: 15px;
+    }
+    
+    #huanfu {
+        width: 950px;
+        height: 100px;
+        margin: 0 auto;
+        background-color: rebeccapurple;
+        margin-top: 30px;
+    }
+</style>
+
+<body>
+    <fieldset class="head">
+        <legend class="word">网页换肤</legend>
+        <fieldset class="head1">
+            <div id="div1"></div>
+            <div id="div2"></div>
+            <div id="div3"></div>
+            <div id="div4"></div>
+        </fieldset>
+        <div id="huanfu">
+
+        </div>
+    </fieldset>
+
+</body>
+<script>
+    var div1 = document.getElementById("div1");
+    var div2 = document.getElementById("div2");
+    var div3 = document.getElementById("div3");
+    var div4 = document.getElementById("div4");
+    var huanfu = document.getElementById("huanfu");
+    div1.onclick = function() {
+        div1.style.marginTop = "5px";
+        div2.style.marginTop = "15px";
+        div3.style.marginTop = "15px";
+        div4.style.marginTop = "15px";
+        var value = "blue";
+        div1.style.backgroundColor = value;
+        window.localStorage.setItem("huanfu1", value);
+        huanfu.style.backgroundColor = window.localStorage.getItem("huanfu1");
+    }
+    div2.onclick = function() {
+        div1.style.marginTop = "15px";
+        div3.style.marginTop = "15px";
+        div4.style.marginTop = "15px";
+        div2.style.marginTop = "5px";
+        var value = "green";
+        div2.style.backgroundColor = value;
+        window.localStorage.setItem("huanfu1", value);
+        huanfu.style.backgroundColor = window.localStorage.getItem("huanfu1");
+    }
+    div3.onclick = function() {
+        div1.style.marginTop = "15px";
+        div2.style.marginTop = "15px";
+        div4.style.marginTop = "15px";
+        div3.style.marginTop = "5px";
+        var value = "red";
+        div3.style.backgroundColor = value;
+        window.localStorage.setItem("huanfu1", value);
+        huanfu.style.backgroundColor = window.localStorage.getItem("huanfu1");
+    }
+    div4.onclick = function() {
+        div1.style.marginTop = "15px";
+        div2.style.marginTop = "15px";
+        div3.style.marginTop = "15px";
+        div4.style.marginTop = "5px";
+        var value = "pink";
+        div4.style.backgroundColor = value;
+        window.localStorage.setItem("huanfu1", value);
+        huanfu.style.backgroundColor = window.localStorage.getItem("huanfu1");
+    }
+    window.onload = function() {
+        huanfu.style.backgroundColor = window.localStorage.getItem("huanfu1");
+    }
+</script>
+
+</html>
